@@ -1,3 +1,4 @@
+``` sql
 WITH matched AS (
   SELECT f.id, s.status
   FROM full_names f
@@ -7,3 +8,4 @@ UPDATE full_names f
 SET status = matched.status
 FROM matched
 WHERE f.id = matched.id;
+```
