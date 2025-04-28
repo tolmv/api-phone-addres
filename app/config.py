@@ -4,6 +4,8 @@ from pydantic import BaseSettings
 class Settings(BaseSettings):
     API_TITLE: str = "Phone-Address API"
     API_VERSION: str = "1.0.0"
+    API_DESCRIPTION: str = "API for managing phone numbers and addresses"
+
     
     REDIS_HOST: str = os.getenv("REDIS_HOST", "localhost")
     REDIS_PORT: int = int(os.getenv("REDIS_PORT", 6379))
